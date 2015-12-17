@@ -6,8 +6,8 @@ shuffle(arr);
 
 function shuffle(array) {
 	var currentIndex = array.length,
-			temporaryValue,
-			randomIndex;
+		temporaryValue,
+		randomIndex;
 	// While there remain elements to shuffle
 	while (0 !== currentIndex) {
 		// Pick a remaining element
@@ -18,7 +18,7 @@ function shuffle(array) {
 		array[currentIndex] = array[randomIndex];
 		array[randomIndex] = temporaryValue;
 	}
-  return array;
+	return array;
 }
 
 function generateTreasure() {
@@ -29,29 +29,29 @@ function generateTreasure() {
 		card = arr.shift();
 		switch (card) {
 			case 'K':
-				return 'Road Builders';
+				return '<p>Take a road builders card</p><img src="img/road-building.jpg" />';
 			case 'Q':
-				return 'Development Card';
+				return '<p>Take a random development card</p><img src="img/all-dev-cards.jpg" />';
 			case 2:
-				return 'Take 2 Resources';
+				return '<p>Take any two resources</p><img src="img/all-resources.jpg" />';
 			case 3:
-				return 'Brick, Wool, Grain';
+				return '<p>Take brick, sheep, and wheat</p><img src="img/brick-sheep-wheat.jpg" />';
 			// ie, Ace or Joker
 			default:
-				return 'Take 1 Resource';
+				return '<p>Take any one resource</p><img src="img/all-resources.jpg" />';
 		}
 	}
 }
 
 $(document).ready(function() {
 	var $button = $('.button'),
-			$result = $('.result'),
+			$result = $('.result span'),
 			$remaining = $('#remaining'),
 			result;
 
 	$button.on('click', function() {
 		result = generateTreasure();
-		$result.html(result);
-		$remaining.html(arr.length);
+		$result.hide().html(result).fadeIn("slow");
+		$remaining.hide().html(arr.length).fadeIn("slow");
 	});
 });

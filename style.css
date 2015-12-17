@@ -3,9 +3,9 @@ div {
 }
 
 body {
-	background-color: #0E0F19;
+	background-color: #466060;
 	text-align: center;
-	color: #ffffff;
+	color: #a1b0ab;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2em;
 }
@@ -17,12 +17,13 @@ h1 {
 }
 
 .result {
-	width: 300px;
-	margin: 20px auto;
-	padding: 20px;
-	background-color: #466060;
-	border-radius: 10px;
-	text-align: center;
+	font-size: 120%;
+	color: #fff;
+}
+
+.result img {
+	max-width: 100%;
+	border-radius: 5px;
 }
 
 .button {
@@ -43,7 +44,6 @@ h1 {
 	border:1px solid #dcdcdc;
 	display:inline-block;
 	cursor:pointer;
-	width: 340px;
 	color:#666666;
 	font-size: 1em;
 	font-weight:bold;
